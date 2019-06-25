@@ -3,40 +3,7 @@
     box-sizing: border-box;
 }
 
-/* header {
-    position: fixed;
-    height: 85px;
-    width: 100%;
-    border: solid red;
-    padding: 0px 30px;
-}
-
-.logo {
-    display: inline;
-    float: left;
-    font-weight: 400;
-    font-size: 16px;
-    margin: 20px 0px;
-    line-height: 1.6;
-}
-
-nav{
-    display: inline;
-    float: right;
-    border: solid red;
-    margin: 20px;
-    width: 50%;
-}
-
-nav a {
-    height: 100%;
-    line-height: 1.6;
-    text-align: center;
-    border: solid red;
-    padding: 20px;
-}
-
-*/
+/* TOP BAR STYLING */
 
 header {
     height: 85px;
@@ -71,4 +38,76 @@ header h1 {
     font-size: 16px;
     font-weight: 400;
     
+}
+
+/* GRID STYLING */
+
+.container {
+    display: grid;
+    width: 100%;
+    height: max-content;
+    grid-template-columns: 100%;
+    grid-template-rows: 600px 600px 700px 62px;
+    grid-template-areas:
+    "top"
+    "middle"
+    "bottom"
+    "footer";
+}
+
+.cell {
+    border: solid black;
+}
+
+/*TOP CELL STYLING */
+
+.top {
+    grid-area: top;
+    background-image: url('./Images/images/banner-landingpage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.top aside {
+    text-align: center;
+    width: 600px;
+    height: 350px;
+    background-color: green;
+    z-index: 1;
+    color: white;
+    font-size: 20px;
+}
+
+.top aside div {
+    margin: 56px 80px;
+}
+
+#instant {
+    font-family: 'Rubik';
+    font-style: italic;
+}
+
+.top h1 {
+font-size: 50px;
+font-family: 'Rubik';
+}
+
+.top h3 {
+    font-weight: 400;
+}
+
+.top button {
+    background-color: grey;
+    width: 408px;
+    height: 64px;
+    border-radius: 4px;
+    line-height: 1.4;
+    font-size: 20px;
+    border: none;
+    color: white;
+
 }
