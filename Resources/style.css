@@ -3,17 +3,24 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* TOP BAR STYLING */
 
 header {
     height: 85px;
     width: 100%;
-    border: solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
     padding: 0 30px;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
 }
 
 header nav {
@@ -47,7 +54,7 @@ header h1 {
     width: 100%;
     height: max-content;
     grid-template-columns: 100%;
-    grid-template-rows: 600px 600px 700px 62px;
+    grid-template-rows: minmax(600px,auto) minmax(700px,auto) 700px 62px;
     grid-template-areas:
     "top"
     "middle"
@@ -77,13 +84,15 @@ header h1 {
     width: 600px;
     height: 350px;
     background-color: green;
-    z-index: 1;
     color: white;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .top aside div {
-    margin: 56px 80px;
+    margin: 0;
+    padding: 0;
 }
 
 #instant {
@@ -109,5 +118,43 @@ font-family: 'Rubik';
     font-size: 20px;
     border: none;
     color: white;
+}
 
+/* MIDDLE CELL STYLING */
+
+.middle {
+    grid-area: middle;
+    display: flex;
+    background-color: #f3f3f3;
+    justify-content: space-evenly; 
+    align-items: center;   
+}
+
+.middle article {
+    width: 42%;
+    height: 540px;
+    background: white;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.middle img {
+    height: auto;
+    width: 90%;
+    padding-top: 32px;
+}
+
+.middle h2 {
+    font-size: 36px;
+    padding: 0 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+}
+
+.middle p {
+    font-family: "Roboto-Light";
+    font-size: 16px;
+    margin-top: 0px;
+    padding: 0% 5%;
 }
